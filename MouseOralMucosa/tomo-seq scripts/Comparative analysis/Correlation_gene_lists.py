@@ -81,12 +81,3 @@ plt.xticks(rotation=90)
 plt.yticks(rotation=0)
 plt.savefig(path + '/Jaccard_heatmap.pdf', bbox_inches = 'tight')
 plt.show()
-
-
-# Replace diagonal NaN values with 0 to avoid clustering issues
-np.fill_diagonal(similarity_matrix, 0)
-
-# Plot the clustermap using seaborn with the viridis color palette
-sns.clustermap(similarity_df, annot=similarity_df.round(1), fmt='.1f', cmap="viridis", linewidths=0.5, mask=similarity_df.isnull(), figsize=(14, 12))
-plt.title('Jaccard Similarity Clustermap of Gene Lists', y=1.05)
-plt.show()
