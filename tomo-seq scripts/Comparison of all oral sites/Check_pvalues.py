@@ -3,7 +3,6 @@ import sys, os
 import pandas as pd
 import numpy as np
 import glob
-import sc_aautils as scaa
 import Colors
 import matplotlib
 import matplotlib.pyplot as plt
