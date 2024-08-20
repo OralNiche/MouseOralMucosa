@@ -7,6 +7,8 @@ import sc_aautils as scaa
 import Colors
 import matplotlib
 import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage
+from scipy.cluster import hierarchy
 
 # Default sans-serif font is HELVETICA
 matplotlib.rcParams['font.sans-serif'] = "Helvetica"
@@ -16,6 +18,14 @@ matplotlib.rcParams['font.family'] = "sans-serif"
 
 path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
 
+def hierarchicalClustering(df, cth = 100, plot = False, method = 'ward', metric = 'euclidean', nolabels = 'True', leaf_colors = []):
+    """performs hierarchical clustering using linkage and dendogram functions from scipy.cluster.hierarchy package"""
+    if len(leaf_colors) > 0:
+        hierarchy.set_link_color_palette(leaf_colors)
+    Z = linkage(df, method=method, metric = metric)
+    dg = dendrogram(Z, no_labels=nolabels, color_threshold=cth, no_plot = np.invert(plot))
+    plt.show()
+    return Z, dg
 
 files = glob.glob('corr_genes_*tsv')
 
@@ -35,7 +45,7 @@ for k in dfs:
 smdf = mdf[['adj-pv_'+k for k in dfs]]
 fsmdf = smdf.fillna(1)
 
-Z, dg = scaa.hierarchicalClustering(fsmdf)
+Z, dg = hierarchicalClustering(fsmdf)
 
 smdf = smdf.loc[fsmdf.index[dg['leaves']]]
 
