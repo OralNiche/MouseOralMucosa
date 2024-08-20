@@ -25,7 +25,6 @@ path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
 
 #BM data
 corrGenes_BM = pd.read_table(path + '/corr_genes_BM.tsv', sep = '\t', index_col=0)
-#corrGenes_BM = pd.DataFrame(corrGenes_BM)
 
 pvth = 0.05
 
@@ -57,7 +56,6 @@ gl_HP = [g for g in gl_HP_cnt]
 
 #VT data
 corrGenes_VT = pd.read_table(path + '/corr_genes_VT.tsv', sep = '\t', index_col=0)
-#corrGenes_VT = pd.DataFrame(corrGenes_VT)
 
 pvth = 0.05
 
@@ -73,7 +71,6 @@ gl_VT = [g for g in gl_VT_cnt]
 
 #DT data
 corrGenes_DT = pd.read_table(path + '/corr_genes_DT.tsv', sep = '\t', index_col=0)
-#corrGenes_DT = pd.DataFrame(corrGenes_DT)
 
 pvth = 0.05
 
