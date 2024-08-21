@@ -16,7 +16,7 @@ matplotlib.rcParams['font.sans-serif'] = "Helvetica"
 matplotlib.rcParams['font.family'] = "sans-serif"
 
 
-path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
+path= '/Documents/TomoSeq_project/Tomo/'
 
 # Load the gene data for each sample
 HP_df = pd.read_table(path + 'clusters_HP_reprGenes1.tsv', sep = '\t')
