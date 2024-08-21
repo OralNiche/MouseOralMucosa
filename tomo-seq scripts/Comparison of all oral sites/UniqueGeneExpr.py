@@ -19,7 +19,7 @@ matplotlib.rcParams['font.sans-serif'] = "Helvetica"
 matplotlib.rcParams['font.family'] = "sans-serif"
 
 
-path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
+path= '/Documents/TomoSeq_project/Tomo/'
 
 
 #Read in all data
