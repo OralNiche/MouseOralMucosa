@@ -84,7 +84,7 @@ dfs_g1 = rdfs1
 dfs_g2 = rdfs2
 
 #Pathway for saving data
-path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
+path= '/Documents/TomoSeq_project/Tomo/'
 
 
 #QC fpr uniques transcripts and genes per replicate
