@@ -19,7 +19,7 @@ matplotlib.rcParams['font.sans-serif'] = "Helvetica"
 matplotlib.rcParams['font.family'] = "sans-serif"
 
 
-path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
+path= '/Documents/TomoSeq_project/Tomo/'
 
 np.bool = np.bool_
 np.random.seed(174612)
