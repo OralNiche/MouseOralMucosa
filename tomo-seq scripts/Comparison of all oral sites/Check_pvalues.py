@@ -15,7 +15,7 @@ matplotlib.rcParams['font.sans-serif'] = "Helvetica"
 matplotlib.rcParams['font.family'] = "sans-serif"
 
 
-path= '/Users/kaikretzschmar/Dropbox/_TomoSeq/'
+path= '/Documents/TomoSeq_project/Tomo/'
 
 def hierarchicalClustering(df, cth = 100, plot = False, method = 'ward', metric = 'euclidean', nolabels = 'True', leaf_colors = []):
     """performs hierarchical clustering using linkage and dendogram functions from scipy.cluster.hierarchy package"""
